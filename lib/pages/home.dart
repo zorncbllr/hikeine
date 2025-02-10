@@ -6,9 +6,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: Text('Home'),
+        backgroundColor: Colors.grey[200],
       ),
+      drawer: Drawer(),
+      body: Column(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hikeine/pages/home.dart';
 
 class Greeter extends StatelessWidget {
   const Greeter({super.key});
@@ -72,7 +73,12 @@ class Greeter extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Home(),
+                ),
+              ),
               child: Text(
                 'Shop Now',
                 style: TextStyle(
