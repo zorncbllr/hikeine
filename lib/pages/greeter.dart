@@ -46,30 +46,30 @@ class Greeter extends StatelessWidget {
               ),
             ),
 
+            SizedBox(
+              height: 34,
+            ),
+
             // shop now button
-            GestureDetector(
-              onTap: () {
-                print('shopping');
-              },
-              child: Container(
-                margin: EdgeInsets.only(
-                  top: 28,
+            FilledButton(
+              style: ButtonStyle(
+                padding: WidgetStateProperty.all(
+                  EdgeInsets.symmetric(
+                    horizontal: 120,
+                    vertical: 18,
+                  ),
                 ),
-                padding: EdgeInsets.symmetric(
-                  horizontal: 100,
-                  vertical: 18,
+                backgroundColor: WidgetStateProperty.all(
+                  Color.fromARGB(255, 49, 49, 49),
                 ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Color.fromARGB(255, 49, 49, 49),
-                ),
-                child: Text(
-                  'Shop Now',
-                  style: TextStyle(
-                    color: Colors.grey[200],
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
               ),
+              onPressed: () {},
+              child: Text('Shop Now'),
             )
           ],
         ),
