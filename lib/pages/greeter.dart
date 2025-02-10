@@ -56,7 +56,7 @@ class Greeter extends StatelessWidget {
                 padding: WidgetStateProperty.all(
                   EdgeInsets.symmetric(
                     horizontal: 120,
-                    vertical: 18,
+                    vertical: 20,
                   ),
                 ),
                 backgroundColor: WidgetStateProperty.all(
@@ -69,7 +69,12 @@ class Greeter extends StatelessWidget {
                 ),
               ),
               onPressed: () {},
-              child: Text('Shop Now'),
+              child: Text(
+                'Shop Now',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             )
           ],
         ),
