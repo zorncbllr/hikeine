@@ -11,6 +11,9 @@ class Greeter extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(
+              height: 60,
+            ),
             // logo
             const Image(
               image: AssetImage('lib/images/hikeine-logo.png'),
@@ -22,7 +25,7 @@ class Greeter extends StatelessWidget {
               height: 100,
             ),
 
-            // hikeine text
+            // hikeine title
             const Text(
               'Hikeine',
               style: TextStyle(
@@ -32,6 +35,7 @@ class Greeter extends StatelessWidget {
               ),
             ),
 
+            // sub title
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
@@ -64,7 +68,7 @@ class Greeter extends StatelessWidget {
                 ),
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
               ),
