@@ -4,12 +4,7 @@ import 'package:hikeine/utils/category_button.dart';
 class Home extends StatelessWidget {
   Home({super.key});
 
-  List<CategoryButton> categories = [
-    CategoryButton(label: 'All'),
-    CategoryButton(label: 'Tents'),
-    CategoryButton(label: 'Shoes'),
-    CategoryButton(label: 'Bags'),
-  ];
+  List<String> categories = ['All', 'Tents', 'Bags', 'Shoes'];
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +16,7 @@ class Home extends StatelessWidget {
       ),
       drawer: Drawer(),
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
             // search bar
             Container(
@@ -66,6 +61,20 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
+
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 12,
+                vertical: 4,
+              ),
+              child: Row(
+                spacing: 8,
+                children: [
+                  for (String category in categories)
+                    CategoryButton(label: category)
+                ],
+              ),
+            )
           ],
         ),
       ),
