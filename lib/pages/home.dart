@@ -62,19 +62,18 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            Container(
-              margin: EdgeInsets.symmetric(
+            Padding(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 12,
                 vertical: 4,
               ),
               child: Row(
                 spacing: 8,
                 children: [
-                  for (String category in categories)
-                    CategoryButton(label: category)
+                  for (String label in categories) CategoryButton(label: label)
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
